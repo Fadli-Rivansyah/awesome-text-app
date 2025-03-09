@@ -1,5 +1,4 @@
 import './style.css'
-import 'flowbite';
 
 const startColor = document.querySelector("#start-color");
 const endColor = document.querySelector("#end-color");
