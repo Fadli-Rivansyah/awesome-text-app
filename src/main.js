@@ -15,7 +15,7 @@ inputDeg.addEventListener("input", (e) =>{
 });
 document.querySelector("#btn-result").addEventListener("click", () => {
     textPreview.classList.replace("text-gray-900", "text-transparent")
-    textPreview.classList.replace("text-white", "text-transparent")
+    textPreview.classList.replace("dark:text-white", "text-transparent")
     textPreview.style.backgroundImage = `linear-gradient(${inputDeg.value}deg, ${startColor.value} , ${endColor.value} )`;
     
     const tailwindClass = `bg-clip-text text-transparent bg-gradient-to-r from-[${startColor.value}] to-[${endColor.value}]`;
