@@ -14,6 +14,7 @@ inputDeg.addEventListener("input", (e) =>{
     previewDeg.textContent = e.target.value + " deg";
 });
 document.querySelector("#btn-result").addEventListener("click", () => {
+    textPreview.classList.replace("text-gray-900", "text-transparent")
     textPreview.classList.replace("text-white", "text-transparent")
     textPreview.style.backgroundImage = `linear-gradient(${inputDeg.value}deg, ${startColor.value} , ${endColor.value} )`;
     
