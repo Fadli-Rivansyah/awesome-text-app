@@ -1,5 +1,6 @@
 import './style.css'
 
+const position = document.querySelector("#position");
 const startColor = document.querySelector("#start-color");
 const endColor = document.querySelector("#end-color");
 const codePreview = document.querySelector("#code-preview")
@@ -9,19 +10,31 @@ const previewDeg = document.querySelector("#preview-deg");
 const btnCopy = document.querySelector("#btn-copy");
 const iconCopy = document.querySelector(".icon-copy");
 
-
-inputDeg.addEventListener("input", (e) =>{
-    previewDeg.textContent = e.target.value + " deg";
-});
+// btn apply
 document.querySelector("#btn-result").addEventListener("click", () => {
+    const directionMap = {
+        t: "to top",
+        b: "to bottom",
+        r: "to right",
+        l: "to left",
+        tl: "to top left",
+        tr: "to top right",
+        bl: "to bottom left",
+        br: "to bottom right",
+    }    
+
+    const direction = directionMap[position.value || "to bottom"];
+    // replace color default
     textPreview.classList.replace("text-gray-900", "text-transparent")
     textPreview.classList.replace("dark:text-white", "text-transparent")
-    textPreview.style.backgroundImage = `linear-gradient(${inputDeg.value}deg, ${startColor.value} , ${endColor.value} )`;
-    
-    const tailwindClass = `bg-clip-text text-transparent bg-gradient-to-r from-[${startColor.value}] to-[${endColor.value}]`;
+    // set gradient with css
+    textPreview.style.backgroundImage = `linear-gradient(${direction}, ${startColor.value} , ${endColor.value})`;
+    const tailwindClass = `bg-clip-text text-transparent bg-gradient-to-${position.value} from-[${startColor.value}] to-[${endColor.value}]`;
+    // view code tailwind
     codePreview.textContent = tailwindClass;
 });
 
+// btn copy
 btnCopy.addEventListener("click", () => {
     navigator.clipboard.writeText(codePreview.textContent)
     iconCopy.innerHTML= `

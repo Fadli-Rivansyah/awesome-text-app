@@ -4,7 +4,6 @@
     <meta charset="UTF-8" />
     <meta name="author" content="Fadli Rivansyah">
     <meta name="language" content="id">
-    
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="Tailwind CSS, linear gradient, generator warna, kode gradient, desain web, CSS gradient, Tailwind generator">
     <meta name="description" content="Awesome Text adalah tool gratis untuk membuat linear gradient dengan mudah. Pilih warna, generate, dan dapatkan kode Tailwind CSS siap pakai.">
@@ -12,70 +11,77 @@
     <title>AwesomeText - Generator Linear Gradient untuk Tailwind CSS</title>
   </head>
   <body  class="bg-white dark:bg-gray-900">
-      <nav class="bg-white  dark:bg-gray-900">
+    <nav class="bg-white  dark:bg-gray-900">
         <div class="md:w-2/3 lg:w-full xl:max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4 border-b-1 border-b-gray-200 dark:border-gray-700">
             <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <span class="self-center text-2xl font-bold whitespace-nowrap text-gray-900 dark:text-white">AwesomeText.</span>
             </a>
         </div>
-     </nav>
-      <main class="md:w-2/3 lg:w-full xl:max-w-screen-xl py-[0em] h-full px-4 mx-auto">
-          <header class="max-w-2xl text-white py-5">
-              <h2 class="text-4xl md:text-7xl font-extrabold text-gray-900 dark:text-white mb-5">Beautify your Jargon with <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#c629d1] to-[#db6f0a]">awesomeText!</span></h2>
-              <p class="mb-3 text-gray-500 dark:text-gray-400 text-base/7">With Awesome Text, you can create linear gradients easily and for free. Choose the desired color combination, use the generate feature, and the Tailwind CSS code will be available to you instantly. Just copy-paste, and your design is ready to be more attractive! 🚀</p>
-          </header>
-          <section class="mx-auto flex flex-col lg:flex-row justify-items-start gap-2 my-[2em]">
-              <div class="w-full lg:w-1/3 mb-5">
-                  <section class="flex flex-col  gap-2 mb-5">
-                      <div class="mb-5">
-                          <label for="orientation" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Orientation</label>
-                            <input type="text" id="orientasi" name="orientasi" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Linear-gradient" disabled />
-                      </div>
-                      <div class="mb-5 justify-between w-full flex ">
-                          <div>
-                              <label for="input-deg" class="block mb-3 text-sm font-medium text-gray-900 dark:text-white">Position (deg)</label>
-                              <div class="flex items-center gap-2">
-                                  <input type="range" value="0" max="360" name="input-deg" id="input-deg" class="w-max h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
-                                  <span id="preview-deg" class="font-semibold w-full flex text-gray-900 dark:text-white">0 deg</span>
-                              </div>
-                          </div>
-                          <div class="flex  gap-5">
-                              <div>
-                                  <label for="start-color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Start Color</label>
-                                  <input type="color" name="start-color" id="start-color">
-                              </div>
-                              <div>
-                                  <label for="end-color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">End Color</label>
-                                  <input type="color" name="end-color" id="end-color">
-                              </div>
-                          </div>
-                      </div>
-                  </section>
-                  <button id="btn-result" name="btn-result" class="w-full mb-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Apply</button>
-              </div> 
-              <section class="preview w-full lg:w-1/2 flex flex-col gap-6 mx-auto ">
-                  <h2  class="text-5xl lg:text-7xl font-extrabold  text-gray-900 dark:text-white bg-clip-text  bg-gradient-to-r from-emerald-400 to-sky-400" id="text-preview">Hello World</h2>
-                  <section class="coantainer_code overflow-x-auto ">
-                      <div class=" bg-gray-800 p-4 mt-4 rounded-lg ">
-                        <div class="flex justify-between items-center h-max">
-                            <p class="text-sm text-gray-400 ">Tailwind Code:</p>
-                            <button aria-label="apply" id="btn-copy" class="w-max text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                                <div class="icon-copy">
-                                    <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-                                        <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M14 4v3a1 1 0 0 1-1 1h-3m4 10v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2m11-3v10a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7.87a1 1 0 0 1 .24-.65l2.46-2.87a1 1 0 0 1 .76-.35H18a1 1 0 0 1 1 1Z"/>
-                                    </svg>
-                                </div>
-                            </button>
+    </nav>
+    <main class="md:w-2/3 lg:w-full xl:max-w-screen-xl py-[0em] h-full px-4 mx-auto">
+        <header class="max-w-2xl text-white py-5">
+            <h2 class="text-4xl md:text-7xl  font-extrabold text-gray-900 dark:text-white mb-5">Beautify your Jargon with <span class="bg-clip-text text-transparent bg-gradient-to-r from-[#c629d1] to-[#db6f0a]">awesomeText!</span></h2>
+            <p class="mb-3 text-gray-500 dark:text-gray-400 text-base/7">With Awesome Text, you can create linear gradients easily and for free. Choose the desired color combination, use the generate feature, and the Tailwind CSS code will be available to you instantly. Just copy-paste, and your design is ready to be more attractive! 🚀</p>
+        </header>
+        <section class="mx-auto flex flex-col lg:flex-row justify-items-start gap-2 my-[2em]">
+            <div class="w-full lg:w-1/3 mb-5">
+                <section class="flex flex-col  gap-2 mb-5">
+                    <div class="mb-5">
+                        <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Orientation</label>
+                        <input type="text" id="first_name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Linear-gradient" required disabled />
+                    </div>
+                    
+                    <div class="mb-5 justify-between items-center w-full flex ">
+                        <div>
+                        <label for="position" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Position</label>
+                        <select id="position" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                            <option value="t">to top</option>
+                            <option value="b">to bottom</option>
+                            <option value="r">to right</option>
+                            <option value="l">to left </option>
+                            <option value="tl">to top left</option>
+                            <option value="tr">to top right</option>
+                            <option value="bl">to bottom left</option>
+                            <option value="br">to bottom right</option>
+                        </select>
                         </div>
-                          <pre class="whitespace-pre text-left overflow-x-auto">
-                              <code id="code-preview" class="text-green-400 text-sm flex">## code</code>
-                          </pre>
-                      </div>
-                  </section>
-              </section>
-          </section>
-      </main>
-      <footer class="md:w-2/3 lg:w-full xl:max-w-screen-xl mx-auto bg-white bottom-0 h-max  dark:bg-gray-900 m-4">
+                        <div class="flex  gap-5">
+                            <div>
+                                <label for="start-color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Start Color</label>
+                                <input type="color" name="start-color" id="start-color">
+                            </div>
+                            <div>
+                                <label for="end-color" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">End Color</label>
+                                <input type="color" name="end-color" id="end-color">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <button id="btn-result" name="btn-result" class="w-full mb-5 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Apply</button>
+            </div> 
+            <section class="preview w-full lg:w-1/2 flex flex-col gap-6 mx-auto">
+                <h2  class="text-5xl lg:text-7xl font-extrabold  text-gray-900 dark:text-white bg-clip-text  bg-gradient-to-r from-emerald-400 to-sky-400" id="text-preview">Hello World</h2>
+                <section class="coantainer_code overflow-x-auto ">
+                    <div class=" bg-gray-800 p-4 mt-4 rounded-lg ">
+                    <div class="flex justify-between items-center h-max">
+                        <p class="text-sm text-gray-400 ">Tailwind Code:</p>
+                        <button aria-label="apply" id="btn-copy" class="w-max text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-2 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                            <div class="icon-copy">
+                                <svg class="w-6 h-6 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                                    <path stroke="currentColor" stroke-linejoin="round" stroke-width="2" d="M14 4v3a1 1 0 0 1-1 1h-3m4 10v1a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9a1 1 0 0 1 1-1h2m11-3v10a1 1 0 0 1-1 1h-7a1 1 0 0 1-1-1V7.87a1 1 0 0 1 .24-.65l2.46-2.87a1 1 0 0 1 .76-.35H18a1 1 0 0 1 1 1Z"/>
+                                </svg>
+                            </div>
+                        </button>
+                    </div>
+                        <pre class="whitespace-pre text-left overflow-x-auto">
+                            <code id="code-preview" class="text-green-400 text-sm flex">## code</code>
+                        </pre>
+                    </div>
+                </section>
+            </section>
+        </section>
+    </main>
+    <footer class="md:w-2/3 lg:w-full xl:max-w-screen-xl mx-auto bg-white bottom-0 h-max  dark:bg-gray-900 m-4">
         <div class="  p-4 md:py-8">
             <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
             <div class="mx-auto flex justify-start items-center gap-4">
